@@ -67,7 +67,7 @@
           <span class="section-aside">The studio</span>
         </div>
         <div class="about__grid">
-          <h2 class="about__statement" id="about-title">A creative studio<br />with a <em>point of view.</em></h2>
+          <h2 class="about__statement" id="about-title">A multidisciplinary<br />creative studio.</h2>
           <div class="about__copy">
             <p class="about__lead">Après Lab is an independent creative studio based in Buenos Aires.</p>
             <p>We work across brand strategy, creative direction, content production, communications and brand experiences.</p>
@@ -122,9 +122,51 @@
           <span class="section-aside">Say hello</span>
         </div>
         <div class="contact__body">
-          <p class="contact__intro">For projects, collaborations and inquiries:</p>
-          <h2 id="contact-title">Get in<br /><span>touch.</span></h2>
-          <a class="contact__email" href="mailto:apreslabcontact@gmail.com">apreslabcontact@gmail.com <span aria-hidden="true">↗</span></a>
+          <div class="contact__heading">
+            <p class="contact__intro">For projects, collaborations and inquiries:</p>
+            <h2 id="contact-title">Get in<br /><span>touch.</span></h2>
+          </div>
+
+          <div class="contact__form-wrap">
+            <form id="contact-form" class="contact-form" action="https://formsubmit.co/apreslabcontact@gmail.com" method="POST">
+              <input type="hidden" name="_subject" value="New inquiry — APRÈS LAB" />
+              <input type="hidden" name="_next" value="https://apreslab.github.io/thanks.html" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_url" value="https://apreslab.github.io/#contact" />
+              <div class="contact-form__trap" aria-hidden="true">
+                <label for="contact-website">Leave this field blank</label>
+                <input type="text" name="_honey" id="contact-website" autocomplete="off" tabindex="-1" />
+              </div>
+              <div class="contact-form__field">
+                <label for="contact-name">Name <span aria-hidden="true">*</span></label>
+                <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Your name" maxlength="120" required />
+              </div>
+              <div class="contact-form__field">
+                <label for="contact-email">Email <span aria-hidden="true">*</span></label>
+                <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required />
+              </div>
+              <div class="contact-form__field">
+                <label for="contact-phone">Phone number <span aria-hidden="true">*</span></label>
+                <input id="contact-phone" name="phone" type="tel" autocomplete="tel" placeholder="+54 ..." maxlength="35" required />
+              </div>
+              <div class="contact-form__field contact-form__field--message">
+                <label for="contact-message">Your message <span aria-hidden="true">*</span></label>
+                <textarea id="contact-message" name="message" rows="5" minlength="5" maxlength="5000" placeholder="Tell us a little about your project..." required></textarea>
+              </div>
+              <button class="contact-form__submit" type="submit">
+                <span class="contact-form__button-label">Send message</span>
+                <span class="contact-form__button-arrow" aria-hidden="true">↗</span>
+              </button>
+            </form>
+            <p id="contact-form-error" class="contact-form__error" role="alert" hidden>We couldn't send your message. Please try again, or email us directly below.</p>
+            <div id="contact-form-success" class="contact-form__success" role="status" tabindex="-1" hidden>
+              <span class="contact-form__success-kicker">Message received / APRÈS LAB</span>
+              <h3>Thank you for reaching out.</h3>
+              <p>We'll get back to you soon.</p>
+            </div>
+            <p class="contact__email-alternative">You can also contact us via <a href="mailto:apreslabcontact@gmail.com">apreslabcontact@gmail.com</a>.</p>
+            <p class="contact__privacy">Your details are used to reply to your inquiry. Form submissions are handled by FormSubmit, a third-party service.</p>
+          </div>
         </div>
         <footer class="footer">
           <p>APRÈS LAB <span>© <span id="year">2026</span></span></p>
