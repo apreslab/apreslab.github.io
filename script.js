@@ -30,6 +30,7 @@
       feedback.hidden = true;
       submit.disabled = true;
       buttonLabel.textContent = 'Sending...';
+      let failureMessage = "We couldn't send your message. Please try again, or email us directly below.";
       try {
         const data = Object.fromEntries(new FormData(contactForm).entries());
         const endpoint = new URL(contactForm.action);
@@ -44,6 +45,10 @@
         });
         const result = await response.json();
         if (!response.ok || (result.success !== true && result.success !== 'true')) {
+          const providerMessage = typeof result.message === 'string' ? result.message : '';
+          if (/activat(?:e|ion|ed)/i.test(providerMessage)) {
+            failureMessage = 'Our contact form is being activated. For now, please email us directly below.';
+          }
           throw new Error('FormSubmit did not confirm submission');
         }
         contactForm.reset();
@@ -52,7 +57,7 @@
         success.focus();
       } catch (error) {
         feedback.hidden = false;
-        feedback.textContent = "We couldn't send your message. Please try again, or email us directly below.";
+        feedback.textContent = failureMessage;
       } finally {
         submit.disabled = false;
         buttonLabel.textContent = 'Send message';
