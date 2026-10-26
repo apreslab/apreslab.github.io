@@ -268,3 +268,34 @@
     overflow-wrap:break-word;
   }
 }
+
+
+/* Native vector icon system: never rely on OS emoji glyph substitution. */
+.ui-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  flex: 0 0 auto;
+  vertical-align: -0.125em;
+  overflow: visible;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.wordmark__symbol .ui-icon { vertical-align: -0.125em; }
+.thanks-page__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+.thanks-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+.thanks-page__brand .ui-icon,
+.thanks-page__back .ui-icon {
+  vertical-align: middle;
+}
