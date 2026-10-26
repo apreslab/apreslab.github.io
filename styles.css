@@ -299,3 +299,52 @@
 .thanks-page__back .ui-icon {
   vertical-align: middle;
 }
+
+
+/* Bilingual privacy notices — unobtrusive editorial presentation. */
+.contact__privacy a,.footer__privacy-link {text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.footer__privacy-link {white-space:nowrap}
+.footer__legal-sep {padding:0 8px;opacity:.55}
+.privacy-page {background:var(--paper)}
+.privacy-header {background:var(--yellow);padding:0 var(--side)}
+.privacy-header__inner {min-height:110px;display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--ink)}
+.privacy-header__right {display:flex;align-items:center;gap:clamp(20px,4vw,65px)}
+.privacy-header__back {font-size:12px;font-weight:500;border-bottom:1px solid currentColor;padding-bottom:6px;white-space:nowrap}
+.privacy-page .wordmark {font-size:13px}
+.privacy-hero {background:var(--yellow);padding:clamp(75px,11vw,150px) var(--side) clamp(72px,9vw,122px)}
+.privacy-hero__eyebrow {margin:0 0 30px;font-size:12px;letter-spacing:.09em;text-transform:uppercase}
+.privacy-hero h1 {font-size:clamp(65px,12vw,180px);font-weight:500;line-height:.88;letter-spacing:-.085em;margin:0}
+.privacy-hero__meta {display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin:55px 0 0;font-size:12px;line-height:1.6}
+.privacy-hero__meta p {margin:0;max-width:520px}
+.privacy-content {padding:clamp(80px,11vw,170px) var(--side) clamp(100px,12vw,175px)}
+.privacy-content__intro {max-width:940px;font-size:clamp(22px,3vw,43px);line-height:1.23;letter-spacing:-.045em;font-weight:500;margin:0 0 100px}
+.privacy-list {margin:90px 0 0;padding:0;list-style:none}
+.privacy-item {display:grid;grid-template-columns:minmax(0,.55fr) minmax(0,1fr);gap:clamp(32px,9vw,150px);border-top:1px solid var(--line);padding:33px 0 44px}
+.privacy-item:last-child {border-bottom:1px solid var(--line)}
+.privacy-item__title {display:grid;grid-template-columns:40px minmax(0,1fr);gap:10px;align-content:start}
+.privacy-item__number {font-size:11px;padding-top:6px}
+.privacy-item h2 {font-size:clamp(22px,2.6vw,38px);line-height:1.1;font-weight:500;letter-spacing:-.05em;margin:0}
+.privacy-item__text {max-width:660px;font-size:clamp(14px,1.2vw,17px);line-height:1.75}
+.privacy-item__text p {margin:0 0 16px}
+.privacy-item__text p:last-child {margin-bottom:0}
+.privacy-item__text a {text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.privacy-footer {background:var(--ink);color:var(--paper);padding:40px var(--side);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;font-size:12px}
+.privacy-footer p {margin:0}
+.privacy-footer a {border-bottom:1px solid currentColor;padding-bottom:5px}
+@media(max-width:640px){
+  .privacy-header__inner {min-height:80px}
+  .privacy-header__right {gap:16px}
+  .privacy-header__back {font-size:11px}
+  .privacy-header .wordmark {font-size:12px}
+  .privacy-hero {padding:90px var(--side) 80px}
+  .privacy-hero h1 {font-size:clamp(51px,13vw,90px)}
+  .privacy-hero__meta {flex-direction:column;align-items:flex-start;gap:22px;margin-top:48px}
+  .privacy-content {padding:90px var(--side) 120px}
+  .privacy-content__intro {font-size:25px}
+  .privacy-list {margin-top:65px}
+  .privacy-item {grid-template-columns:1fr;gap:24px;padding:26px 0 34px}
+  .privacy-item__title {grid-template-columns:34px 1fr}
+  .privacy-item h2 {font-size:26px}
+  .privacy-footer {padding:30px var(--side);font-size:11px}
+  .footer__legal-sep {padding:0 4px}
+}
